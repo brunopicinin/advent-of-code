@@ -29,7 +29,7 @@ cols = len(data[0])
 lines = data[:]
 for c in range(cols):
     bit = most_common_bit(lines, c)
-    lines = [l for l in lines if l[c] == bit]
+    lines = [x for x in lines if x[c] == bit]
     if len(lines) == 1:
         break
 
@@ -38,7 +38,7 @@ oxygen = int("".join(lines), 2)
 lines = data[:]
 for c in range(cols):
     bit = least_common_bit(lines, c)
-    lines = [l for l in lines if l[c] == bit]
+    lines = [x for x in lines if x[c] == bit]
     if len(lines) == 1:
         break
 
